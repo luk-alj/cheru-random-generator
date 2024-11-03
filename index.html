@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frasi di Vita e Amore</title>
     <style>
-        /* Impostazioni di base */
+        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -20,11 +20,11 @@
             align-items: center;
             min-height: 100vh;
             overflow: hidden;
-            flex-direction: column; /* Impostazione della direzione del flex */
+            flex-direction: column; 
         }
-        /* Contenitore principale */
+    
         #container {
-            background-color: rgba(255, 255, 255, 0.1); /* Colore del box più chiaro */
+            background-color: rgba(255, 255, 255, 0.1); 
             width: 80%;
             max-width: 600px;
             padding: 40px;
@@ -35,15 +35,15 @@
             z-index: 1;
             color: #ff0000;
         }
-        /* Stile della frase */
+        
         #frase {
             font-size: 1.4em;
             font-style: italic;
-            color: #ffffff; /* Testo delle frasi in bianco */
+            color: #ffffff; 
             margin-bottom: 30px;
             line-height: 1.6;
         }
-        /* Titolo */
+       
         h1 {
             font-size: 2em;
             color: #ff0000;
@@ -51,7 +51,7 @@
             font-weight: bold;
             font-style: italic;
         }
-        /* Bottone */
+    
         #generaBtn {
             padding: 12px 24px;
             font-size: 1em;
@@ -66,17 +66,17 @@
         #generaBtn:hover {
             background-color: #b22222;
         }
-        /* Stile del footer */
+     
         footer {
             margin-top: 30px;
             font-size: 0.8em;
             color: #777;
-            text-align: center; /* Centra il footer */
-            width: 100%; /* Fa sì che il footer prenda tutta la larghezza */
+            text-align: center; 
+            width: 100%; 
             position: relative;
             z-index: 1;
         }
-        /* GIF Animate */
+
         .gif {
             position: absolute;
             width: 50px;
@@ -92,12 +92,12 @@
             background: url('https://media.giphy.com/media/jWRnA7aBoUOvsiAzJB/giphy.gif?cid=ecf05e47x7xi8gndgp5e595uhulyjlf8kctuoqhi4b2qvo25&ep=v1_gifs_search&rid=giphy.gif&ct=g') no-repeat center;
             background-size: contain;
         }
-        /* Posizionamento delle GIF */
+       
         .gif1 { top: 10px; left: 10px; }
         .gif2 { top: 10px; right: 10px; }
         .gif3 { bottom: 10px; left: 10px; }
         .gif4 { bottom: 10px; right: 10px; }
-        /* Animazione per effetto galleggiante */
+        
         @keyframes float {
             0% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -117,14 +117,14 @@
     <p>© 2024 Cherub1n0 Random Generator. Risparmiati l'apertura di Facebook. Buongiornissimo Caffèè!</p>
 </footer>
 
-<!-- GIF Animate -->
+
 <div class="gif gif1 heart"></div>
 <div class="gif gif2 star"></div>
 <div class="gif gif3 heart"></div>
 <div class="gif gif4 star"></div>
 
 <script>
-    // Array di frasi ispirate a Letizia Cherubino
+  
     const frasi = [
         "Ogni uomo e ogni donna portano nel cuore un segreto, una luce che brilla solo per chi sa vedere oltre i tramonti dell'anima.",
         "L'amore tra un uomo e una donna è come un tramonto: ogni volta diverso, ogni volta unico, un attimo in cui il tempo sembra fermarsi.",
@@ -161,10 +161,9 @@
     "Le sfide quotidiane di una commessa sono come i colori di una tavolozza: possono sembrare disordinate, ma insieme creano un'opera d'arte piena di vita.",
     "Un sorriso sincero può cambiare l'umore di un cliente e, a volte, il mio stesso giorno; è in questo scambio che scopro il potere della connessione umana.",
     "Essere commessa significa essere un po' psicologa, un po' amica; ascoltiamo le preoccupazioni e le gioie degli altri mentre condividiamo i nostri prodotti.",
-        // Aggiungi qui altre frasi come preferisci
     ];
 
-    // Funzione per generare una frase casuale
+
     function generaFraseCasuale() {
         const indice = Math.floor(Math.random() * frasi.length);
         document.getElementById('frase').innerText = frasi[indice];
