@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frasi di Vita e Amore</title>
+    <style>
+        /* Impostazioni di base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Cursive', 'Georgia', serif;
+            background-color: #000;
+            color: #ff0000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            flex-direction: column; /* Impostazione della direzione del flex */
+        }
+        /* Contenitore principale */
+        #container {
+            background-color: rgba(255, 255, 255, 0.1); /* Colore del box più chiaro */
+            width: 80%;
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+            position: relative;
+            z-index: 1;
+            color: #ff0000;
+        }
+        /* Stile della frase */
+        #frase {
+            font-size: 1.4em;
+            font-style: italic;
+            color: #ffffff; /* Testo delle frasi in bianco */
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        /* Titolo */
+        h1 {
+            font-size: 2em;
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* Bottone */
+        #generaBtn {
+            padding: 12px 24px;
+            font-size: 1em;
+            background-color: #ff0000;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-style: italic;
+        }
+        #generaBtn:hover {
+            background-color: #b22222;
+        }
+        /* Stile del footer */
+        footer {
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #777;
+            text-align: center; /* Centra il footer */
+            width: 100%; /* Fa sì che il footer prenda tutta la larghezza */
+            position: relative;
+            z-index: 1;
+        }
+        /* GIF Animate */
+        .gif {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            pointer-events: none;
+            animation: float 3s infinite ease-in-out;
+        }
+        .gif.heart {
+            background: url('https://media.giphy.com/media/jWRnA7aBoUOvsiAzJB/giphy.gif?cid=ecf05e47x7xi8gndgp5e595uhulyjlf8kctuoqhi4b2qvo25&ep=v1_gifs_search&rid=giphy.gif&ct=g') no-repeat center;
+            background-size: contain;
+        }
+        .gif.star {
+            background: url('https://media.giphy.com/media/jWRnA7aBoUOvsiAzJB/giphy.gif?cid=ecf05e47x7xi8gndgp5e595uhulyjlf8kctuoqhi4b2qvo25&ep=v1_gifs_search&rid=giphy.gif&ct=g') no-repeat center;
+            background-size: contain;
+        }
+        /* Posizionamento delle GIF */
+        .gif1 { top: 10px; left: 10px; }
+        .gif2 { top: 10px; right: 10px; }
+        .gif3 { bottom: 10px; left: 10px; }
+        .gif4 { bottom: 10px; right: 10px; }
+        /* Animazione per effetto galleggiante */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <h1>Cherub1n0 Random Generator</h1>
+    <p id="frase">Clicca sul pulsante per la tua dose quotidiana di aforismi in pieno stile Cherub1n14n0.</p>
+    <button id="generaBtn" onclick="generaFraseCasuale()">Genera Frase</button>
+</div>
+
+<footer>
+    <p>© 2024 Cherub1n0 Random Generator. Risparmiati l'apertura di Facebook. Buongiornissimo Caffèè!</p>
+</footer>
+
+<!-- GIF Animate -->
+<div class="gif gif1 heart"></div>
+<div class="gif gif2 star"></div>
+<div class="gif gif3 heart"></div>
+<div class="gif gif4 star"></div>
+
+<script>
+    // Array di frasi ispirate a Letizia Cherubino
+    const frasi = [
+        "Ogni uomo e ogni donna portano nel cuore un segreto, una luce che brilla solo per chi sa vedere oltre i tramonti dell'anima.",
+        "L'amore tra un uomo e una donna è come un tramonto: ogni volta diverso, ogni volta unico, un attimo in cui il tempo sembra fermarsi.",
+        "La vita è una raccolta di tramonti e albe, di istanti in cui ci riscopriamo, come uomini e donne che cercano un riflesso di sé nell'altro.",
+        "In ogni donna c'è una forza gentile, una luce nascosta che illumina l'uomo accanto a lei, come un faro tra le onde della vita.",
+        "Siamo viandanti sulla strada della vita, uomini e donne che si incontrano e si intrecciano come raggi di sole al calare del tramonto.", "La vita mi ha insegnato che ogni passo, anche il più piccolo, ha il suo peso. A volte, ci vuole tempo affinché le nostre azioni parlino più delle parole, ma alla fine, tutto ciò che doniamo ci torna indietro in modi inaspettati.",
+        "La presenza di qualcuno che ci completa può trasformare anche il giorno più grigio in un momento carico di significato e di luce, come un raggio di sole che squarcia le nuvole.",
+        "Le parole sono i colori con cui dipingiamo il nostro mondo interiore, e ogni frase è una pennellata che arricchisce la tela della nostra esistenza.",
+        "Amore è: 'Prepara il tuo cuore, oggi andiamo a esplorare l'infinito!'",
+        "Un sogno è come un faro, illumina il cammino anche nei momenti più bui e ci guida verso la nostra verità.",
+        "Ieri erano semi. Oggi fioriscono. A volte, la bellezza di un cambiamento richiede solo il coraggio di lasciar andare e di abbracciare il flusso della vita.",
+        "Ho imparato a schermarmi dalle opinioni di chi non stimo, spesso si tratta di chi giudica senza comprensione, dimenticando che il vero sguardo critico inizia da sé stessi.",
+        "Il mio dono più prezioso è la capacità di riconoscere il valore delle relazioni che nutrono la mia anima.",
+        "La fine di alcuni legami può essere una liberazione, un passo verso la serenità e la salute mentale, permettendo di lasciare andare ciò che non ci serve più.",
+        "Più condivido la mia vita con te, più il desiderio di continuare a costruire momenti insieme cresce, un impulso naturale di connessione autentica.",
+        "Mi sento vulnerabile, come una foglia al vento, consapevole che l’amore che ho sempre sognato è finalmente qui, e temo di perderlo per non averlo vissuto a sufficienza.",
+        "I tramonti ci insegnano che ogni conclusione porta con sé una promessa di nuova bellezza, un ciclo che si rinnova in modi straordinari.",
+        "Due cose mi hanno sempre salvato: la scrittura e la capacità di amare profondamente. È da qui che trae origine la mia voce.",
+        "Per me, le persone sono vere se emanano calore. Se brillano di vita e condividono la loro luce, anche nei giorni di oscurità.",
+        "Non esiste un momento nella vita che io possa considerare il mio obiettivo finale. Ogni passo è una scoperta, un viaggio che continua a trasformarsi attraverso nuove esperienze e riflessioni interiori.",
+        "Con te o senza di te, il mio mondo perde di colore; la tua presenza è il mio equilibrio.",
+        "Le persone gentili possiedono una forza rara, un equilibrio di fragilità e resilienza che le rende straordinarie.",
+        "Quando ci sentiamo amati, le ferite dell’abbandono svaniscono, ma ricordiamoci che l'amore richiede cura, attenzione e un impegno costante, un lavoro di cuore da coltivare ogni giorno.", "Ogni cliente che entra è una nuova opportunità per dimostrare che la vita è fatta di piccoli momenti di felicità, e il mio compito è di aiutarli a trovare la gioia in ciò che scelgono.",  "L'amore è un viaggio che ci insegna a riconoscere la bellezza nei momenti più semplici, come una risata condivisa o un abbraccio sincero.",
+    "Ogni giorno è un'opportunità per riscrivere la nostra storia, per aggiungere nuove pagine di avventure e sogni che ci avvicinano a chi amiamo.",
+    "La vita, come un mare in tempesta, può sembrare spaventosa, ma con una mano affianco, possiamo affrontare qualsiasi onda.",
+    "Le relazioni vere sono come giardini: richiedono cura, pazienza e un tocco di amore per fiorire nel loro splendore.",
+    "Quando ci abbandoniamo all'amore, scopriamo che le nostre paure diventano più piccole, e la gioia di essere insieme cresce in modo esponenziale.",
+    "Ogni tramonto è un promemoria che la bellezza può sorgere anche dalle chiusure, trasformando la fine in un nuovo inizio.",
+    "La scrittura è il mio rifugio, un luogo dove posso dare voce alle mie emozioni e dare forma ai miei sogni.",
+    "Amare è un atto di coraggio, un gesto di fiducia che ci permette di essere vulnerabili senza timore di essere feriti.",
+    "La fragilità è una forza silenziosa che ci ricorda che anche le persone più forti hanno bisogno di coccole e comprensione.",
+    "La vita è una danza, e ogni passo che compiamo ci avvicina o ci allontana dalle persone che amiamo, insegnandoci a muoverci con grazia e consapevolezza.",     "Ogni giorno, la vita da commessa ci insegna che anche nei momenti di stress e frenesia, un gesto gentile può illuminare la giornata di qualcuno.",
+    "Dietro ogni prodotto c'è una storia, e come commessa, ho il privilegio di condividere queste storie con chi entra nel negozio.",
+    "Le sfide quotidiane di una commessa sono come i colori di una tavolozza: possono sembrare disordinate, ma insieme creano un'opera d'arte piena di vita.",
+    "Un sorriso sincero può cambiare l'umore di un cliente e, a volte, il mio stesso giorno; è in questo scambio che scopro il potere della connessione umana.",
+    "Essere commessa significa essere un po' psicologa, un po' amica; ascoltiamo le preoccupazioni e le gioie degli altri mentre condividiamo i nostri prodotti.",
+        // Aggiungi qui altre frasi come preferisci
+    ];
+
+    // Funzione per generare una frase casuale
+    function generaFraseCasuale() {
+        const indice = Math.floor(Math.random() * frasi.length);
+        document.getElementById('frase').innerText = frasi[indice];
+    }
+</script>
+<audio controls autoplay src="Blooming Melody_ by Keys Of Moon 🇺🇸 🇷🇺 [ ezmp3.cc ].mp3" </audio>
+</body>
+</html>
